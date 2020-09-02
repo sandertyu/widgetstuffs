@@ -11,8 +11,8 @@ Use `python3 -m http.server` and navigate to localhost:8000 to see the thebelab 
 |Widget|Thebelab|JupyterHub|Libretexts|
 |-|-|-|-|
 |ipympl|Works properly|Works properly|Works properly|
-|ipyleaflet|Works properly|Works properly|Displays, but cells cannot communicate as seen in heatmap example (probably true in general and is a limitation of current CKeditor plugin|
-|pythreejs|-|-|-|
+|ipyleaflet|Works properly|Works properly|Displays, but cells cannot communicate as seen in heatmap example (probably true in general and is a limitation of current CKeditor plugin)|
+|pythreejs|`Uncaught (in promise) TypeError: Cannot read property 'connectToComm' of undefined`|Works properly|`Uncaught (in promise) TypeError: Cannot read property 'connectToComm' of undefined`|
 |ipywidgets|-|-|-|
 |bqplot|-|-|-|
 |ipyvolume|-|-|-|
