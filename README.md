@@ -10,8 +10,8 @@ Use `python3 -m http.server` and navigate to localhost:8000 to see the thebelab 
 
 |Widget|Thebelab|JupyterHub|Libretexts|
 |-|-|-|-|
-|ipympl|Plots need `require.min.js` script to load, and `Font Awesome 5` for the interactive buttons|Works properly|Works properly|
-|ipyleaflet|Works properly|Works properly|Displays, but cells cannot communicate as seen in heatmap example|
+|ipympl|Works properly|Works properly|Works properly|
+|ipyleaflet|Works properly|Works properly|Displays, but cells cannot communicate as seen in heatmap example (probably true in general and is a limitation of current CKeditor plugin|
 |pythreejs|-|-|-|
 |ipywidgets|-|-|-|
 |bqplot|-|-|-|
