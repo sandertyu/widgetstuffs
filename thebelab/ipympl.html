@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>thebelab widget testing</title>
+
+  <!-- script that allows the line plots to be displayed, otherwise it gives an error -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+
+  <!-- Thebe configuration !-->
+  <script type="text/x-thebe-config">
+    {
+      binderOptions: {
+        repo: "sandertyu/widgetstuffs",
+        ref: "master"
+      },
+      kernelOptions: {
+        name: "python3",
+      },
+      requestKernel: true,
+      bootstrap: true,
+    }
+  </script>
+
+  <!-- thebelab javascript bundle -->
+  <script src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+
+</head>
+
+<body>
+
+  <!-- source from https://github.com/matplotlib/ipympl/blob/master/examples/header_visible.ipynb -->
+  <pre data-executable="true" data-language="python">
+%matplotlib widget
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots()
+fig.canvas.layout.width = '7in'
+fig.canvas.layout.height= '5in'
+ax.plot([1,2,3], [4,5,3])
+fig.canvas.header_visible = False
+fig, ax = plt.subplots()
+fig.canvas.layout.width = '7in'
+fig.canvas.layout.height= '5in'
+fig.canvas.toolbar_visible = False
+fig.canvas.header_visible = False
+ax.plot([1,2,3], [4,5,3])
+  </pre>
+</body>
+
+</html>
