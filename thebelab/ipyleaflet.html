@@ -1,18 +1,18 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>thebelab widget testing</title>
+    <meta charset="utf-8">
+    <title>thebelab widget testing</title>
 
-  <!-- script that allows the line plots to be displayed, otherwise it gives an error -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <!-- script that allows the line plots to be displayed, otherwise it gives an error -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
 
-  <!-- Thebe configuration !-->
-  <script type="text/x-thebe-config">
+    <!-- Thebe configuration !-->
+    <script type="text/x-thebe-config">
     {
       binderOptions: {
-        repo: "sandertyu/widgetstuffs",
-        ref: "master"
+        repo: "LibreTexts/ckeditor-binder-plugin",
+        ref: "Python-Env"
       },
       kernelOptions: {
         name: "python3",
@@ -22,42 +22,40 @@
     }
   </script>
 
-  <!-- thebelab javascript bundle -->
-  <script src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <!-- thebelab javascript bundle -->
+    <script src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
 
 </head>
 
 <body>
 
-  <!-- source from https://github.com/jupyter-widgets/ipyleaflet/blob/master/examples/AntPath.ipynb -->
-  <pre data-executable="true" data-language="python">
-import json
-from ipyleaflet import AwesomeIcon, Marker, Map
+    <!-- source from https://github.com/jupyter-widgets/ipyleaflet/blob/master/examples/AntPath.ipynb -->
+    <pre data-executable="true" data-language="python">
+from ipyleaflet import Map, Heatmap
+from random import uniform
+import time
 
-markers = []
+def create_random_data(length):
+    "Return a list of some random lat/lon/value triples."
+    return [[uniform(-80, 80), 
+             uniform(-180, 180), 
+             uniform(0, 1000)] for i in range(length)]
 
-with open('./bars.json', 'r') as fobj:
-    bars = json.load(fobj)
-
-    for feature in bars['features']:
-    symbol = feature['properties']['marker-symbol']
-    coords = feature['geometry']['coordinates']
-    
-    icon = AwesomeIcon(
-        name=symbol,
-        marker_color='red' if symbol == 'bus' else 'blue'
-    )
-    markers.append(Marker(icon=icon, location=(coords[1], coords[0])))
-
-m = Map(center=(38.91342738235981, -77.03912909142674), zoom=13)
-
-for marker in markers:
-    m += marker
-    
+m = Map(center=[0, 0], zoom=2)
 m
-
-markers[0].icon = AwesomeIcon(name='spinner', marker_color='green', icon_color='darkgreen', spin=True)
   </pre>
+
+    <pre data-executable="true" data-language="python">
+heat = Heatmap(locations=create_random_data(1000), radius=20, blur=10)
+m.add_layer(heat)
+    </pre>
+
+    <pre data-executable="true" data-language="python">
+for i in range(100):
+    heat.locations = create_random_data(1000)
+    time.sleep(0.1)
+    </pre>
+
 </body>
 
 </html>
