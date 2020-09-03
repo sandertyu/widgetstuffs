@@ -15,7 +15,7 @@ Use `python3 -m http.server` and navigate to localhost:8000 to see the thebelab 
 |pythreejs|`Uncaught (in promise) TypeError: Cannot read property 'connectToComm' of undefined`|Works properly|`Uncaught (in promise) TypeError: Cannot read property 'connectToComm' of undefined`|
 |ipywidgets|`interact()` does not display the widget. Some widgets work on their own (BoundedIntText), and others do not (IntSlider).|Works Properly|`interact()` does not display the widget, same error as thebelab|
 |bqplot|does not render full buttons but draws plot. probably needs some script that is included on libretexts but not here|No output except error displaying. `Error: Module bqplot, semver range ^0.5.14 is not registered as a widget module` in console|Displays plot and interactive buttons, seems to work properly|
-|ipyvolume|-|-|-|
+|ipyvolume|binder build errors out, cannot even view using official [binder example](https://mybinder.org/v2/gh/maartenbreddels/ipyvolume/master?filepath=notebooks/simple.ipynb)|ipyvolume not installed|ipyvolume not installed|
 |nglview|-|-|-|
 |ipycytoscape|-|-|-|
 
