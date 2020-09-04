@@ -12,7 +12,7 @@ Use `python3 -m http.server` and navigate to localhost:8000 to see the thebelab 
 |-|-|-|-|
 |ipympl|Works properly|Works properly|Works properly|
 |ipyleaflet|Works properly|Works properly|Displays, but cells cannot communicate as seen in heatmap example (probably true in general and is a limitation of current CKeditor plugin)|
-|pythreejs|`Uncaught (in promise) TypeError: Cannot read property 'connectToComm' of undefined`|Works properly|`Uncaught (in promise) TypeError: Cannot read property 'connectToComm' of undefined`|
+|pythreejs|Works properly|Works properly|Works properly|
 |ipywidgets|`interact()` does not display the widget. Some widgets work on their own (BoundedIntText), and others do not (IntSlider).|Works Properly|`interact()` does not display the widget, same error as thebelab|
 |bqplot|does not render full button fonts but draws plot. probably needs some script that is included on libretexts but not here|Works properly|Displays plot and interactive buttons, seems to work properly|
 |ipyvolume|binder build errors out, cannot even view using official [binder example](https://mybinder.org/v2/gh/maartenbreddels/ipyvolume/master?filepath=notebooks/simple.ipynb)|gives same error as ipyvolume-image, very buggy in general but does "work"|not installed|

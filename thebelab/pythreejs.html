@@ -32,40 +32,22 @@
     <!-- source from https://github.com/jupyter-widgets/pythreejs/blob/master/examples/Examples.ipynb -->
     <pre data-executable="true" data-language="python">
 from pythreejs import *
-import numpy as np
 from IPython.display import display
-from ipywidgets import HTML, Text, Output, VBox
-from traitlets import link, dlink
-
-import numpy as np
-from scipy import ndimage
-import matplotlib
-import matplotlib.pyplot as plt
-from skimage import img_as_ubyte 
-        
-jet = matplotlib.cm.get_cmap('jet')
-        
-np.random.seed(int(1)) # start random number generator
-n = int(5) # starting points
-size = int(32) # size of image
-im = np.zeros((size,size)) # create zero image
-points = size*np.random.random((2, n**2)) # locations of seed values
-im[(points[0]).astype(np.int), (points[1]).astype(np.int)] = size # seed high values
-im = ndimage.gaussian_filter(im, sigma=size/(float(4)*n)) # smooth high values into surrounding areas
-im *= 1/np.max(im)# rescale to be in the range [0,1]
-rgba_im = img_as_ubyte(jet(im)) # convert the values to rgba image using the jet colormap
-        
-t = DataTexture(data=rgba_im, format='RGBAFormat', width=size, height=size)
-        
-geometry = SphereGeometry(radius=1, widthSegments=16, heightSegments=10)#TorusKnotGeometry(radius=2, radialSegments=200)
-material = MeshLambertMaterial(map=t)
-        
-myobject = Mesh(geometry=geometry, material=material)
-c = PerspectiveCamera(position=[0, 3, 3], fov=40, children=[DirectionalLight(color='#ffffff', position=[3, 5, 1], intensity=0.5)])
-scene = Scene(children=[myobject, c, AmbientLight(color='#777777')])
-        
-renderer = Renderer(camera=c, scene = scene, controls=[OrbitControls(controlling=c)], width=400, height=400)
-display(renderer)
+      
+# Materials
+mat = MeshStandardMaterial(color='#ff0000')
+mat_green = MeshStandardMaterial(color='#00ff00')
+mat_blue = MeshStandardMaterial(color='#0000ff')
+      
+# Geometries
+torus = TorusGeometry(radius=12, tube=3, radialSegments=16, tubularSegments=100)
+sphere = SphereGeometry(radius=12, _flat=True)
+      
+bufferSphere = SphereBufferGeometry(radius=12, _flat=True)
+bufferTorus = TorusBufferGeometry(radius=12, tube=3, radialSegments=16, tubularSegments=100)
+      
+sphere
+bufferSphere
   </pre>
 
 </body>
