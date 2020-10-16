@@ -4,7 +4,7 @@ Repo for cataloging the behavior of widgets in thebe, libretexts, and on jupyter
 
 # How to use
 
-Use `python3 -m http.server` within the `/thebe/` directory and navigate to localhost:8000 to see the thebe results. Change the url to the different html pages within that directory to view them.
+Use `python3 -m http.server` within the `thebe/` directory and navigate to localhost:8000 to see the thebe results. Change the url to the different html pages within the `thebe/` directory or use the directory listing to view them.
 
 # Checklist
 
