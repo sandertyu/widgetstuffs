@@ -25,6 +25,8 @@
 
   <!-- thebelab javascript bundle -->
   <script src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+  <!-- <script src="https://unpkg.com/@jupyter-widgets/html-manager@%5E0.18.0/dist/embed-amd.js"></script>
+  <script src="https://unpkg.com/@jupyter-widgets/html-manager@0.18.4/dist/embed-amd.js"></script> -->
 
 </head>
 
@@ -37,14 +39,110 @@ from ipywidgets import interact, interactive, fixed, interact_manual
 import ipywidgets as widgets
   </pre>
 
+  <h1>Don't work</h1>
+
   <pre data-executable="true" data-language="python">
 def f(x):
     return x
     </pre>
+  
+  <pre data-executable="true" data-language="python">
+widgets.IntSlider(
+value=7,
+min=0,
+max=10,
+step=1,
+description='Test:',
+disabled=False,
+continuous_update=False,
+orientation='horizontal',
+readout=True,
+readout_format='d'
+)
+  </pre>
 
   <pre data-executable="true" data-language="python">
-interact(f, x=10);
-    </pre>
+widgets.FloatSlider(
+  value=7.5,
+  min=0,
+  max=10.0,
+  step=0.1,
+  description='Test:',
+  disabled=False,
+  continuous_update=False,
+  orientation='horizontal',
+  readout=True,
+  readout_format='.1f',
+)
+  </pre>
+
+  <pre data-executable="true" data-language="python">
+widgets.SelectionSlider(
+  options=['scrambled', 'sunny side up', 'poached', 'over easy'],
+  value='sunny side up',
+  description='I like my eggs ...',
+  disabled=False,
+  continuous_update=False,
+  orientation='horizontal',
+  readout=True
+)
+  </pre>
+
+  <pre data-executable="true" data-language="python">
+    interact(f, x=10);
+  </pre>
+  
+  <h1>Work fine</h1>
+
+  <pre data-executable="true" data-language="python">
+widgets.BoundedIntText(
+  value=7,
+  min=0,
+  max=10,
+  step=1,
+  description='Text:',
+  disabled=False
+)
+  </pre>    
+
+  <pre data-executable="true" data-language="python">
+widgets.IntProgress(
+  value=7,
+  min=0,
+  max=10,
+  step=1,
+  description='Loading:',
+  bar_style='', # 'success', 'info', 'warning', 'danger' or ''
+  orientation='horizontal'
+)
+  </pre>   
+
+  <pre data-executable="true" data-language="python">
+widgets.ToggleButton(
+  value=False,
+  description='Click me',
+  disabled=False,
+  button_style='', # 'success', 'info', 'warning', 'danger' or ''
+  tooltip='Description',
+  icon='check' # (FontAwesome names without the `fa-` prefix)
+)
+  </pre>   
+
+  <pre data-executable="true" data-language="python"> 
+widgets.Dropdown(
+  options=['1', '2', '3'],
+  value='2',
+  description='Number:',
+  disabled=False,
+)
+  </pre>   
+
+  <pre data-executable="true" data-language="python"> 
+widgets.DatePicker(
+  description='Pick a Date',
+  disabled=False
+)
+</pre>   
 
 </body>
 
