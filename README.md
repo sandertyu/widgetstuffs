@@ -66,4 +66,11 @@ Use `python3 -m http.server` within the `Thebe/` directory and navigate to local
 ![nglview in libretexts](/screenshots/nglview-libre.png)
 
 
+## bokeh
+
+### In Thebe (Javascript error)
+![bokeh in thebe](/screenshots/bokeh-thebe-error.png)
+
+### In JupyterLab (works properly)
+![bokeh in jupyterlab](/screenshots/bokeh-jup.png)
 
