@@ -19,6 +19,7 @@ Use `python3 -m http.server` within the `Thebe/` directory and navigate to local
 |ipyvolume|figure displays, but sliders and buttons do not render properly, also gives a python error|gives same error as ipyvolume-image, very buggy in general but does "work"|buttons do render but sliders do not, same issues as Thebe (not installed)|
 |nglview|buttons do not display so the animation cannot be run, otherwise works properly|Works properly|Does not display animation slider, but everything (including animation) works properly otherwise (not installed)|
 |ipycytoscape|Works properly|Works properly|Works properly (not installed)|
+|ipygany|Works properly except for ipywidget sliders do not show|||
 
 # Screenshots for widgets with bugs
 
@@ -74,3 +75,7 @@ Use `python3 -m http.server` within the `Thebe/` directory and navigate to local
 ### In JupyterLab (works properly)
 ![bokeh in jupyterlab](/screenshots/bokeh-jup.png)
 
+## ipygany
+
+### In Thebe (visual loads fine, ipywidget sliders will not)
+![ipygany in thebe](/screenshots/ipygany-thebe.png)
