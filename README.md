@@ -10,6 +10,7 @@ Use `python3 -m http.server` within the `Thebe/` directory and navigate to local
 
 |Widget|Thebe|JupyterHub|Libretexts|
 |-|-|-|-|
+|bokeh|Does not display any output, says "JavaScript output is disabled in JupyterLab"|Works properly|| 
 |ipympl|Works properly, needs some handlers and `Awesome Font`|Works properly|Works properly|
 |ipyleaflet|Works properly|Works properly|Displays, but cells cannot communicate as seen in heatmap example (this is a limitation of current CKeditor plugin)|
 |pythreejs|Works properly|Works properly|Works properly (heavily limited by lack of cell communication)|
