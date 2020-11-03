@@ -19,7 +19,7 @@ Use `python3 -m http.server` within the `Thebe/` directory and navigate to local
 |ipyvolume|figure displays, but sliders and buttons do not render properly, also gives a python error|gives same error as ipyvolume-image, very buggy in general but does "work"|buttons do render but sliders do not, same issues as Thebe (not installed)|
 |nglview|buttons do not display so the animation cannot be run, otherwise works properly|Works properly|Does not display animation slider, but everything (including animation) works properly otherwise (not installed)|
 |ipycytoscape|Works properly|Works properly|Works properly (not installed)|
-|ipygany|Works properly except for ipywidget sliders do not show|||
+|ipygany|Works properly except for ipywidget sliders do not show (if you choose to use them with [thresholds, for example](https://ipygany.readthedocs.io/en/latest/api_reference/threshold.html)|||
 
 # Screenshots for widgets with bugs
 
