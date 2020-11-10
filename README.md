@@ -87,7 +87,7 @@ Use `python3 -m http.server` within the `Thebe/` directory and navigate to local
 ![plotly in thebe](/screenshots/plotly-thebe.png)
 
 ### In Jupyterlab (works properly)
-![plotly in jupyterlab](/screenshots/plotly-jup)
+![plotly in jupyterlab](/screenshots/plotly-jup.png)
 
 ### In LibreTexts (doesn't show plots)
 ![plotly in libretexts](/screenshots/plotly-libre.png)
