@@ -20,6 +20,7 @@ Use `python3 -m http.server` within the `Thebe/` directory and navigate to local
 |nglview|buttons do not display so the animation cannot be run, otherwise works properly|Works properly|Does not display animation slider, but everything (including animation) works properly otherwise (not installed)|
 |ipycytoscape|Works properly|Works properly|Works properly (not installed)|
 |ipygany|Works properly except for ipywidget sliders do not show (if you choose to use them with [thresholds, for example](https://ipygany.readthedocs.io/en/latest/api_reference/threshold.html)|||
+|plotly|Works properly|Works properly|Plots do not display|
 
 # Screenshots for widgets with bugs
 
@@ -79,3 +80,14 @@ Use `python3 -m http.server` within the `Thebe/` directory and navigate to local
 
 ### In Thebe (visual loads fine, ipywidget sliders will not)
 ![ipygany in thebe](/screenshots/ipygany-thebe.png)
+
+## plotly
+
+### In Thebe (works properly)
+![plotly in thebe](/screenshots/plotly-thebe.png)
+
+### In Jupyterlab (works properly)
+![plotly in jupyterlab](/screenshots/plotly-jup)
+
+### In LibreTexts (doesn't show plots)
+![plotly in libretexts](/screenshots/plotly-libre.png)
